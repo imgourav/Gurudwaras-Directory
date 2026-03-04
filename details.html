@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harmandir Sahib - Gurudwara Directory</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Specific adjustments for details page if any */
+        .info-row:last-child {
+            border-bottom: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="app-container">
+        <!-- Header / Breadcrumb -->
+        <div class="details-header">
+            <a href="index.html" class="back-button">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="19" y1="12" x2="5" y2="12"></line>
+                    <polyline points="12 19 5 12 12 5"></polyline>
+                </svg>
+            </a>
+            <div style="flex:1;">
+                <h1 style="font-size: 16px; margin: 0;">Gurudwara Information Directory</h1>
+                <div class="subtitle" style="margin-bottom: 0; font-size: 11px;">Complete Listing of Gurudwaras</div>
+            </div>
+        </div>
+
+        <div class="breadcrumb">
+            <a href="index.html">Home</a> &gt; <a href="index.html">All Gurudwaras</a> &gt; <span
+                style="font-weight: 500;">Harmandir Sahib</span>
+        </div>
+
+        <h2 class="details-title">Harmandir Sahib<br>(Golden Temple)</h2>
+
+        <!-- Image Placeholder (Will be updated once generated) -->
+        <img src="assets/golden_temple.png" alt="Golden Temple" class="hero-image" id="hero-img">
+
+        <!-- Information Table -->
+        <ul class="info-table">
+            <li class="info-row">
+                <div class="info-label">City</div>
+                <div class="info-value">Amritsar</div>
+            </li>
+            <li class="info-row">
+                <div class="info-label">State</div>
+                <div class="info-value">Punjab</div>
+            </li>
+            <li class="info-row">
+                <div class="info-label">Address</div>
+                <div class="info-value">Golden Temple Rd, Atta Mandi, Katra Ahluwalia, Amritsar, Punjab 143006</div>
+            </li>
+            <li class="info-row">
+                <div class="info-label">Contact</div>
+                <div class="info-value">+91 183 255 3957</div>
+            </li>
+            <li class="info-row">
+                <div class="info-label">Email</div>
+                <div class="info-value"><a href="mailto:info@sgpc.net">info@sgpc.net</a></div>
+            </li>
+            <li class="info-row">
+                <div class="info-label">Website</div>
+                <div class="info-value"><a href="http://www.goldentempleamritsar.org"
+                        target="_blank">www.goldentempleamritsar.org</a></div>
+            </li>
+            <li class="info-row">
+                <div class="info-label">Timings</div>
+                <div class="info-value">Open 24 Hours (Langar served daily)</div>
+            </li>
+            <li class="info-row">
+                <div class="info-label">Langar</div>
+                <div class="info-value">Yes (World's largest free kitchen)</div>
+            </li>
+            <li class="info-row">
+                <div class="info-label">Special Events</div>
+                <div class="info-value">Gurpurab, Vaisakhi, Diwali (Bandi Chhor Divas)</div>
+            </li>
+        </ul>
+
+        <!-- Description -->
+        <h3 class="section-title">Description</h3>
+        <p class="description-text">
+            The Golden Temple, also known as Harmandir Sahib, meaning "abode of God" or Darbar Sahib, is a Gurudwara
+            located in the city of Amritsar, Punjab, India. It is the holiest Gurudwara and the most important
+            pilgrimage site of Sikhism. The temple is built around a man-made pool (sarovar) that was completed by the
+            fourth Sikh Guru, Guru Ram Das, in 1577.
+        </p>
+
+        <!-- Location Map -->
+        <h3 class="section-title" style="text-align: center;">Location Map</h3>
+        <div class="map-container">
+            <!-- Embedding a static map image for demonstration. In a real app, this would be an iterative map or static map API call. -->
+            <div class="map-placeholder">
+                <img src="https://static-maps.yandex.ru/1.x/?lang=en_US&ll=74.8765,31.6200&z=15&l=map&size=400,200&pt=74.8765,31.6200,pm2rdm"
+                    alt="Map of Golden Temple">
+            </div>
+        </div>
+
+        <a href="index.html" class="btn-outline" style="width: calc(100% - 40px); margin: 0 20px 20px;">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" style="margin-right: 8px; vertical-align: middle;">
+                <line x1="19" y1="12" x2="5" y2="12"></line>
+                <polyline points="12 19 5 12 12 5"></polyline>
+            </svg>
+            Return to Directory
+        </a>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div>© 2024 Gurudwara Information Directory</div>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Contact Us</a>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
