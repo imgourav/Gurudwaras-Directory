@@ -1,118 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gurudwara Directory</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <div class="app-container">
-        <header>
+        <header class="hero-header">
             <h1>Gurudwara Directory</h1>
             <div class="subtitle">Find Gurudwaras near you</div>
-            
-            <nav>
-                <a href="#" class="active">All Listings</a>
-                <a href="#">About</a>
-                <a href="#">Contact</a>
-            </nav>
 
-            <div class="search-container">
-                <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <circle cx="11" cy="11" r="8"></circle>
-                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                </svg>
-                <input type="text" placeholder="Search by name or city...">
-            </div>
-
-            <div class="filter-row">
-                <div class="select-container">
-                    <select>
-                        <option value="">Select State</option>
-                        <option value="dl">Delhi</option>
-                        <option value="pb">Punjab</option>
-                    </select>
-                    <div class="select-arrow"></div>
-                </div>
-                <button class="btn-filter">
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon>
+            <div class="hero-search-box">
+                <div class="search-container">
+                    <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
                     </svg>
-                    Filter
+                    <input type="text" placeholder="Search Gurudwara or City...">
+                </div>
+                <button class="btn-location">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                        <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+                    Use My Location
                 </button>
             </div>
         </header>
 
         <main class="main-content">
-            <div class="results-count">Showing 24 Gurudwaras</div>
+            <!-- Quick Filters -->
+            <section class="quick-filters">
+                <div class="filter-row" style="padding: 0 20px;">
+                    <div class="select-container">
+                        <select>
+                            <option value="">Select State</option>
+                            <option value="pb">Punjab</option>
+                            <option value="dl">Delhi</option>
+                            <option value="hr">Haryana</option>
+                        </select>
+                        <div class="select-arrow"></div>
+                    </div>
+                </div>
 
-            <!-- Card 1 -->
-            <div class="card">
-                <h3>Gurudwara Bangla Sahib</h3>
-                <div class="card-location">New Delhi, Delhi</div>
-                <div class="langar-badge">
-                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-                    Langar: Yes
+                <div class="chips-container" style="margin-top: 16px;">
+                    <button class="chip active">Punjab</button>
+                    <button class="chip">Delhi</button>
+                    <button class="chip">Haryana</button>
+                    <button class="chip">Canada</button>
+                    <button class="chip">UK</button>
+                    <button class="chip">USA</button>
                 </div>
-                
-                <div class="card-details">
-                    <div class="detail-item">
-                        <svg class="detail-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-                        <span>Open 24 Hours</span>
-                    </div>
-                    <div class="detail-item">
-                        <svg class="detail-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-                        <span>011 2334 0174</span>
-                    </div>
-                </div>
-                <a href="#" class="btn-outline">View Details</a>
-            </div>
+            </section>
 
-            <!-- Card 2 -->
-            <div class="card">
-                <h3>Harmandir Sahib (Golden Temple)</h3>
-                <div class="card-location">Amritsar, Punjab</div>
-                <div class="langar-badge">
-                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-                    Langar: Yes
-                </div>
-                
-                <div class="card-details">
-                    <div class="detail-item">
-                        <svg class="detail-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-                        <span>03:00 AM - 10:00 PM</span>
-                    </div>
-                    <div class="detail-item">
-                        <svg class="detail-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-                        <span>0183 255 3957</span>
-                    </div>
-                </div>
-                <a href="details.html" class="btn-outline">View Details</a>
-            </div>
+            <!-- All Gurudwaras List -->
+            <section class="list-section">
+                <h2 class="section-heading">All Gurudwaras</h2>
 
-            <!-- Card 3 -->
-            <div class="card">
-                <h3>Gurudwara Sis Ganj Sahib</h3>
-                <div class="card-location">Chandni Chowk, Delhi</div>
-                <div class="langar-badge">
-                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-                    Langar: Yes
-                </div>
-                
-                <div class="card-details">
-                    <div class="detail-item">
-                        <svg class="detail-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-                        <span>Open 24 Hours</span>
+                <!-- Card 1 -->
+                <div class="card">
+                    <h3>Gurudwara Bangla Sahib</h3>
+                    <div class="card-location">New Delhi, Delhi</div>
+
+                    <div class="card-details">
+                        <div class="detail-item">
+                            <svg class="detail-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12 6 12 12 16 14"></polyline>
+                            </svg>
+                            <span>Open 24 Hours</span>
+                        </div>
+                        <div class="detail-item">
+                            <svg class="detail-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path
+                                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                                </path>
+                            </svg>
+                            <span>011 2334 0174</span>
+                        </div>
                     </div>
-                    <div class="detail-item">
-                        <svg class="detail-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-                        <span>011 2328 5171</span>
+
+                    <div class="langar-badge">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+                        </svg>
+                        Langar Available
                     </div>
+
+                    <a href="details.html" class="btn-outline">View Details</a>
                 </div>
-                <a href="#" class="btn-outline">View Details</a>
-            </div>
+
+                <!-- Card 2 -->
+                <div class="card">
+                    <h3>Harmandir Sahib (Golden Temple)</h3>
+                    <div class="card-location">Amritsar, Punjab</div>
+
+                    <div class="card-details">
+                        <div class="detail-item">
+                            <svg class="detail-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12 6 12 12 16 14"></polyline>
+                            </svg>
+                            <span>03:00 AM - 10:00 PM</span>
+                        </div>
+                        <div class="detail-item">
+                            <svg class="detail-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path
+                                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                                </path>
+                            </svg>
+                            <span>0183 255 3957</span>
+                        </div>
+                    </div>
+
+                    <div class="langar-badge">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+                        </svg>
+                        Langar Available
+                    </div>
+
+                    <a href="details.html" class="btn-outline">View Details</a>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="card">
+                    <h3>Gurudwara Sis Ganj Sahib</h3>
+                    <div class="card-location">Chandni Chowk, Delhi</div>
+
+                    <div class="card-details">
+                        <div class="detail-item">
+                            <svg class="detail-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12 6 12 12 16 14"></polyline>
+                            </svg>
+                            <span>Open 24 Hours</span>
+                        </div>
+                        <div class="detail-item">
+                            <svg class="detail-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path
+                                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                                </path>
+                            </svg>
+                            <span>011 2328 5171</span>
+                        </div>
+                    </div>
+
+                    <div class="langar-badge">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+                        </svg>
+                        Langar Available
+                    </div>
+
+                    <a href="details.html" class="btn-outline">View Details</a>
+                </div>
+            </section>
         </main>
     </div>
 </body>
+
 </html>
